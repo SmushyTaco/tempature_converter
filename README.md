@@ -25,7 +25,7 @@ Cargo: https://crates.io/crates/tempature_converter/
 ### How to Update tempature_converter
 1. Open your Console/Terminal/Powershell/Command Prompt
 
-2. Run "cargo update --package tempature_converter"
+2. Run "cargo install tempature_converter --force"
 
 ### How to Uninstall tempature_converter
 1. Open your Console/Terminal/Powershell/Command Prompt.
