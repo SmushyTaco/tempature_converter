@@ -1,4 +1,4 @@
-# command_line_calculator
+# tempature_converter
 A simple command-line calculator made in Rust.
 
 GitHub: https://github.com/SmushyRepo/tempature_converter/
