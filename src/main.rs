@@ -1,10 +1,10 @@
 use std::io;
 use std::process;
 fn main() {
+	println!("Welcome to my tempature converter!");
 	loop {
 		let mut choice = String::new();
-		println!("Welcome to my tempature converter!");
-		println!("\nNow select the tempature you are going to input to get the converted outcome by writing one of the numbers or one of the symbols!");
+		println!("\nSelect the tempature you are going to input to get the converted outcome by writing one of the numbers or one of the symbols!");
 		println!("1. Fahrenheit (°F)");
 		println!("2. Celsius (°C)");
 		println!("3. Kelvin (K)");
