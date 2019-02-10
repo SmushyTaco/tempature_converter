@@ -3,7 +3,7 @@ A simple command-line calculator made in Rust.
 
 GitHub: https://github.com/SmushyRepo/tempature_converter/
 
-Cargo: https://crates.io/crates/tempature_converter
+Cargo: https://crates.io/crates/tempature_converter/
 
 ## How to Install (Method 1):
 
