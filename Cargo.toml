@@ -1,0 +1,18 @@
+[package]
+name = "tempature_converter"
+version = "1.0.1"
+authors = ["SmushyRepo"]
+description = "A simple command-line tempature converter."
+edition = "2018"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/SmushyRepo/tempature_converter/"
+homepage = "https://github.com/SmushyRepo/tempature_converter/"
+documentation = "https://github.com/SmushyRepo/tempature_converter/"
+
+[profile.dev]
+opt-level=3
+
+[profile.release]
+opt-level=3
+
+[dependencies]
