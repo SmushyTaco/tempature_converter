@@ -1,6 +1,6 @@
 [package]
 name = "tempature_converter"
-version = "1.0.1"
+version = "1.0.2"
 authors = ["SmushyRepo"]
 description = "A simple command-line tempature converter."
 edition = "2018"
