@@ -16,49 +16,19 @@ fn main() {
 		let choice = choice.trim() as &str;
 		match choice {
 			"1" | "1." | "°F" | "°f" | "F" | "f" => {
-				let mut choice = String::new();
-				println!("Enter the value you want to convert.");
-				io::stdin().read_line(&mut choice).unwrap_or_else(|err| {
-					eprintln!("Application Error: {}", err);
-					process::exit(1);
-				});
-				let choice:f64 = choice.trim().parse().unwrap_or_else(|err| {
-					eprintln!("Application Error: {}", err);
-					process::exit(1);
-				});
-				println!("The value you entered is:");
+				let choice = convert();
 				println!("{} degrees Fahrenheit!", choice);
 				println!("{} degrees Celsius!", (choice - 32.0) * 5.0/9.0);
 				println!("{} Kelvin!", (choice - 32.0) * 5.0/9.0 + 273.15);
 			}
 			"2" | "2." | "°C" | "°c" | "C" | "c" => {
-				let mut choice = String::new();
-				println!("Enter the value you want to convert.");
-				io::stdin().read_line(&mut choice).unwrap_or_else(|err| {
-					eprintln!("Application Error: {}", err);
-					process::exit(1);
-				});
-				let choice:f64 = choice.trim().parse().unwrap_or_else(|err| {
-					eprintln!("Application Error: {}", err);
-					process::exit(1);
-				});
-				println!("The value you entered is:");
+				let choice = convert();
 				println!("{} degrees Celsius!", choice);
 				println!("{} degrees Fahrenheit!", (choice * 9.0/5.0) + 32.0);
 				println!("{} Kelvin!", choice + 273.15);
 			}
 			"3" | "3." | "K" | "k" => {
-				let mut choice = String::new();
-				println!("Enter the value you want to convert.");
-				io::stdin().read_line(&mut choice).unwrap_or_else(|err| {
-					eprintln!("Application Error: {}", err);
-					process::exit(1);
-				});
-				let choice:f64 = choice.trim().parse().unwrap_or_else(|err| {
-					eprintln!("Application Error: {}", err);
-					process::exit(1);
-				});
-				println!("The value you entered is:");
+				let choice = convert();
 				println!("{} Kelvin!", choice);
 				println!("{} degrees Fahrenheit!", (choice - 273.15) * 9.0/5.0 + 32.0);
 				println!("{} degrees Celsius!", choice - 273.15);
@@ -74,4 +44,18 @@ fn main() {
 		}
 	}
 	
+}
+fn convert()->f64 {
+	println!("Enter the value you want to convert.");
+	let mut choice = String::new();
+	io::stdin().read_line(&mut choice).unwrap_or_else(|err| {
+		eprintln!("Application Error: {}", err);
+		process::exit(1);
+	});
+	let choice:f64 = choice.trim().parse().unwrap_or_else(|err| {
+		eprintln!("Application Error: {}", err);
+		process::exit(1);
+				});
+	println!("The value you entered is:");
+	return choice;
 }
